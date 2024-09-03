@@ -44,7 +44,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Download module
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: module
           path: C:\Users\runneradmin\Documents\PowerShell\Modules\AnyPackage.Programs\
@@ -67,7 +67,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Download module
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: module
           path: module
@@ -112,7 +112,7 @@ jobs:
     steps:
 
       - name: Download module
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: module-signed
           path: '~/.local/share/powershell/Modules/AnyPackage.Programs'
