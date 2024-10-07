@@ -3,6 +3,7 @@
 // terms of the MIT license.
 
 using Microsoft.Win32;
+
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -53,7 +54,10 @@ namespace AnyPackage.Provider.Programs
             else
             {
                 using var powershell = PowerShell.Create(RunspaceMode.CurrentRunspace);
-                powershell.AddCommand("Get-Package").AddParameter("Name", request.Name);
+
+                powershell.AddCommand("Get-Package")
+                          .AddParameter("Name", request.Name)
+                          .AddParameter("Provider", ProviderInfo.FullName);
 
                 if (request.Version is not null)
                 {
@@ -152,6 +156,7 @@ namespace AnyPackage.Provider.Programs
             }
 
             using var process = GetProcess(uninstallString);
+            process.StartInfo.UseShellExecute = true;
             process.Start();
             process.WaitForExit();
 
@@ -188,7 +193,7 @@ namespace AnyPackage.Provider.Programs
             }
 
             var process = new Process();
-            
+
             if (found && quoted)
             {
                 process.StartInfo.FileName = text.Substring(0, position + 1).Replace("\"", "");
