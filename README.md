@@ -16,13 +16,13 @@ It shows applications that appear in Add/Remove Programs.
 
 ## Install AnyPackage.Programs
 
-```PowerShell
+```powershell
 Install-PSResource AnyPackage.Programs
 ```
 
 ## Import AnyPackage.Programs
 
-```PowerShell
+```powershell
 Import-Module AnyPackage.Programs
 ```
 
@@ -30,12 +30,12 @@ Import-Module AnyPackage.Programs
 
 ### Get list of installed packages
 
-```PowerShell
+```powershell
 Get-Package -Name *7zip*
 ```
 
 ### Uninstall package
 
-```PowerShell
+```powershell
 Get-Package -Name *7zip* | Uninstall-Package
 ```

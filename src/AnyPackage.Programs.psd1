@@ -1,10 +1,10 @@
 @{
     RootModule = 'ProgramsProvider.dll'
-    ModuleVersion = '0.3.1'
+    ModuleVersion = '0.3.2'
     CompatiblePSEditions = @('Desktop', 'Core')
     GUID = '84cf5334-85e0-4263-8471-60394099cefb'
     Author = 'Thomas Nieto'
-    Copyright = '(c) 2023 Thomas Nieto. All rights reserved.'
+    Copyright = '(c) 2024 Thomas Nieto. All rights reserved.'
     Description = 'Windows programs provider for AnyPackage.'
     PowerShellVersion = '5.1'
     RequiredModules = @(
